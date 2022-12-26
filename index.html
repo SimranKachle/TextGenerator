@@ -8,10 +8,10 @@
     <title>Text Generator</title>
   </head>
 
-  <body>
+  <body class="body-class">
     <nav class="nav-bar">
       <span>
-        <img src="Images/logo.png" alt="">
+        <!-- <img src="src/Images/logo.png" alt=""> -->
         <h1 class="logo-text" style="color: #0066ff">Lorem Ipsum</h1>
         <p>A Dummy Text Generator</p>
       </span>
@@ -29,7 +29,7 @@
     </section>
 
     <section class="section2">
-      <!-- <div class="head-section">
+      <div class="head-section">
         <h1 style="color: #0066ff">Try our Dummy Text Generator</h1>
         <hr>
         <p>
@@ -37,30 +37,31 @@
           as little) lorem ipsum as you can handle with our easy to use filler
           text generator.
         </p>
-      </div> -->
+      </div>
 
       <div class="input-div">
-        <span>
-          <label>Enter Value</label>
-          <input placeholder="Enter the value" />
-        </span>
-        <span>
-          <label for="type">Select Type</label>
-
-          <select name="type" id="type">
-            <option value="word">Word</option>
-            <option value="sentence">Sentence</option>
-            <option value="paragraph">Paragraph</option>
+      <form id="gen-form">
+        
+          <label for="gen_count">Enter Value</label>
+          <input id="num" name="gen_count" type="number" class="form-control" min="1" max="100">
+        
+        
+          <label for="gen_option">Select Type</label>
+          <select name="gen_option" id="gen_option" class="form-control">
+            <option value="words">Words</option>
+            <option value="sentences">Sentences</option>
+            <option value="paragraphs">Paragraphs</option>
           </select>
-        </span>
-        <button>Generate</button>
+        
+        <button type="button" id="gen-btn" class="btn">Generate</button>
+      </form>
       </div>
-      <!-- <div>
-        <div class="text-body"></div>
-        <div class="button-bar">
-          <button>Copy Text</button>
-        </div>
-      </div> -->
+      <div class="text-body">
+        <div id="text-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat architecto voluptates cupiditate nulla, reiciendis deleniti culpa obcaecati dolores ipsa exercitationem fugit quae accusantium, excepturi suscipit. Nam numquam accusantium voluptas minus quibusdam, quae, facilis illo exercitationem odio asperiores consequuntur, necessitatibus eveniet omnis hic corrupti consequatur iste architecto esse ab totam officia!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat architecto voluptates cupiditate nulla, reiciendis deleniti culpa obcaecati dolores ipsa exercitationem fugit quae accusantium, excepturi suscipit. Nam numquam accusantium voluptas minus quibusdam, quae, facilis illo exercitationem odio asperiores consequuntur, necessitatibus eveniet omnis hic corrupti consequatur iste architecto esse ab totam officia!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat architecto voluptates cupiditate nulla, reiciendis deleniti culpa obcaecati dolores ipsa exercitationem fugit quae accusantium, excepturi suscipit. Nam numquam accusantium voluptas minus quibusdam, quae, facilis illo exercitationem odio asperiores consequuntur, necessitatibus eveniet omnis hic corrupti consequatur iste architecto esse ab totam officia!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat architecto voluptates cupiditate nulla, reiciendis deleniti culpa obcaecati dolores ipsa exercitationem fugit quae accusantium, excepturi suscipit. Nam numquam accusantium voluptas minus quibusdam, quae, facilis illo exercitationem odio asperiores consequuntur, necessitatibus eveniet omnis hic corrupti consequatur iste architecto esse ab totam officia!</div>
+      </div>
+      <div class="button-bar">
+        <button type="button" id="copy-btn" class="btn">Copy Text</button>
+      </div>
       
     </section>
   </body>
